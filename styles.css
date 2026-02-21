@@ -515,3 +515,77 @@ select:focus{
 input::placeholder, textarea::placeholder{
   color: rgba(185,196,230,.75);
 }
+
+/* ===== Footer 3 columns ===== */
+.footer-3col{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-left{
+  text-align: left;
+}
+
+.footer-center{
+  text-align: center;
+  white-space: nowrap;
+}
+
+.footer-right{
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 780px){
+  .footer-3col{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right{
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+/* ===== Footer 3 columns ===== */
+.footer-3col{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-left{
+  text-align: left;
+}
+
+.footer-center{
+  text-align: center;
+  white-space: nowrap;
+}
+
+.footer-right{
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 780px){
+  .footer-3col{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right{
+    text-align: center;
+    white-space: normal;
+  }
+}
