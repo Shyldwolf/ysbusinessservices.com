@@ -1,11 +1,27 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Get a Quote • YS Business Services LLC</title><link rel="stylesheet" href="styles.css"/></head><body><div class="container">
-<header class="nav">
-  <div class="brand">
-    <img src="assets/logo.png" alt="YS Business Services LLC logo">
-    <div><strong>YS Business Services LLC</strong><br><span style="color:var(--muted);font-size:13px">North Carolina • Call/Text 980-382-1014</span></div>
-  </div>
-  <nav class="links">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Get a Quote • YS Business Services LLC</title>
+  <meta name="description" content="Request a quote from YS Business Services LLC."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="YS Business Services LLC logo">
+        <div>
+          <strong>YS Business Services LLC</strong><br>
+          <span style="color:var(--muted);font-size:13px">North Carolina • Call/Text 980-382-1014</span>
+        </div>
+      </div>
+
+      <nav class="links">
         <a href="index.html" data-en="Home" data-es="Inicio"></a>
         <a href="services.html" data-en="Services" data-es="Servicios"></a>
         <a href="about.html" data-en="About" data-es="Nosotros"></a>
@@ -13,52 +29,123 @@
         <a href="testimonials.html" data-en="Testimonials" data-es="Testimonios"></a>
         <a href="contact.html" class="btn" data-en="Get a Quote" data-es="Cotizar"></a>
         <a class="btn outline" href="tel:+19803821014" data-en="Call" data-es="Llamar"></a>
-    <div class="lang-toggle"><button id="btn-en" type="button">EN</button><button id="btn-es" type="button">ES</button></div>
-  </nav>
-</header>
-<section class="section card">
-<h2 data-en="Get a Quote" data-es="Solicitar Cotización"></h2>
-<p data-en="Fill out this form and we’ll contact you with pricing and next steps." data-es="Completa este formulario y te contactaremos con precio y próximos pasos."></p>
-<form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
-<input type="hidden" name="form-name" value="quote"/><p style="display:none"><label>Don’t fill this out:<input name="bot-field"/></label></p>
-<div class="grid">
-  <div class="card" style="grid-column:span 6"><label><strong data-en="Full Name" data-es="Nombre completo"></strong><br><input name="full_name" required style="width:100%;margin-top:8px;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);"/></label></div>
-  <div class="card" style="grid-column:span 6"><label><strong data-en="Business Name" data-es="Nombre del negocio"></strong><br><input name="business_name" required style="width:100%;margin-top:8px;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);"/></label></div>
-  <div class="card" style="grid-column:span 6"><label><strong data-en="Phone" data-es="Teléfono"></strong><br><input name="phone" required placeholder="+1XXXXXXXXXX" style="width:100%;margin-top:8px;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);"/></label></div>
-  <div class="card" style="grid-column:span 6"><label><strong data-en="Email (optional)" data-es="Correo (opcional)"></strong><br><input name="email" type="email" style="width:100%;margin-top:8px;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);"/></label></div>
-  <div class="card" style="grid-column:span 12"><label><strong data-en="Service needed" data-es="Servicio"></strong><br>
-    <select name="service_needed" required style="width:100%;margin-top:8px;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);">
-      <option value="">Select one</option>
-      <option value="Google Business Profile Optimization">Google Business Profile Optimization</option>
-      <option value="Reviews System">Reviews System</option>
-      <option value="CRM + Follow-Up">CRM + Follow-Up</option>
-      <option value="Bookkeeping/QuickBooks">Bookkeeping/QuickBooks</option>
-      <option value="Business Formation Support">Business Formation Support</option>
-      <option value="Other">Other</option>
-    </select></label></div>
-</div>
-<div class="card" style="margin-top:14px">
-  <label style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" name="terms_privacy_ack" required style="margin-top:4px"/>
-  <span><strong data-en="Terms & Privacy (Required)" data-es="Términos y Privacidad (Obligatorio)"></strong><br>
-  <span data-en="I agree to the Terms & Conditions and Privacy Policy." data-es="Acepto los Términos y Condiciones y la Política de Privacidad."></span><br>
-  <a href="terms.html" style="text-decoration:underline">Terms</a> • <a href="privacy.html" style="text-decoration:underline">Privacy</a></span></label>
-</div>
-<div class="card" style="margin-top:12px">
-  <label style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" name="sms_consent_optional" style="margin-top:4px"/>
-  <span><strong data-en="SMS Consent (Optional)" data-es="Consentimiento SMS (Opcional)"></strong><br>
-  <span data-en="By checking this box, I consent to receive non-marketing text messages from YS Business Services LLC about pricing, services, scheduling, and updates (up to 4 msgs/month). Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help."
-        data-es="Al marcar esta casilla, acepto recibir mensajes (no promocionales) de YS Business Services LLC sobre precios, servicios, coordinación y actualizaciones (hasta 4 mensajes/mes). Pueden aplicar cargos. STOP para salir. HELP para ayuda."></span></span></label>
-</div>
-<div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn" type="submit" data-en="Submit" data-es="Enviar"></button></div>
-</form>
-</section>
-<footer class="footer">
-  <div>© <span id="y"></span> YS Business Services LLC</div>
-  <div style="margin-top:6px">
-    <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
-    <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
+
+        <div class="lang-toggle">
+          <button id="btn-en" type="button">EN</button>
+          <button id="btn-es" type="button">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="section card">
+      <h2 data-en="Request a Quote" data-es="Solicitar Cotización"></h2>
+      <p data-en="Fill out this form and we’ll contact you shortly with pricing and next steps."
+         data-es="Completa este formulario y te contactaremos pronto con precio y próximos pasos."></p>
+
+      <!-- Netlify Form -->
+      <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <!-- Required for Netlify to detect form -->
+        <input type="hidden" name="form-name" value="quote">
+
+        <!-- Honeypot (spam trap) -->
+        <p style="display:none;">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <div class="grid">
+          <div class="card" style="grid-column:span 6">
+            <label data-en="Full Name" data-es="Nombre Completo"></label><br>
+            <input name="full_name" required placeholder="" style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+          </div>
+
+          <div class="card" style="grid-column:span 6">
+            <label data-en="Business Name" data-es="Nombre del Negocio"></label><br>
+            <input name="business_name" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+          </div>
+
+          <div class="card" style="grid-column:span 6">
+            <label data-en="Phone Number" data-es="Teléfono"></label><br>
+            <input name="phone" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+          </div>
+
+          <div class="card" style="grid-column:span 6">
+            <label data-en="Email" data-es="Correo"></label><br>
+            <input type="email" name="email" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+          </div>
+
+          <div class="card" style="grid-column:span 6">
+            <label data-en="City" data-es="Ciudad"></label><br>
+            <input name="city" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+          </div>
+
+          <div class="card" style="grid-column:span 6">
+            <label data-en="Service Needed" data-es="Servicio Necesario"></label><br>
+            <select name="service_needed" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+              <option value="" data-en="Select one" data-es="Elige uno"></option>
+              <option value="Google Business Profile Optimization">Google Business Profile Optimization</option>
+              <option value="Reviews System (Link + QR)">Reviews System (Link + QR)</option>
+              <option value="CRM Setup + Follow-Up">CRM Setup + Follow-Up</option>
+              <option value="Website / Funnel Setup">Website / Funnel Setup</option>
+              <option value="Bookkeeping / QuickBooks Support">Bookkeeping / QuickBooks Support</option>
+              <option value="Business Formation Support">Business Formation Support</option>
+              <option value="Back Office Support">Back Office Support</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="card" style="grid-column:span 12">
+            <label data-en="Details (optional)" data-es="Detalles (opcional)"></label><br>
+            <textarea name="details" rows="4" style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);"></textarea>
+          </div>
+
+          <!-- Terms & Privacy required -->
+          <div class="card" style="grid-column:span 12">
+            <label style="display:flex;gap:10px;align-items:flex-start;">
+              <input type="checkbox" name="terms_privacy" required style="margin-top:4px;">
+              <span
+                data-en="I agree to the Terms & Conditions and Privacy Policy."
+                data-es="Acepto los Términos y Condiciones y la Política de Privacidad."></span>
+            </label>
+            <div style="margin-top:8px;color:var(--muted);font-size:13px;">
+              <a href="terms.html" data-en="View Terms" data-es="Ver Términos"></a> •
+              <a href="privacy.html" data-en="View Privacy" data-es="Ver Privacidad"></a>
+            </div>
+          </div>
+
+          <!-- SMS consent optional (A2P-friendly wording) -->
+          <div class="card" style="grid-column:span 12">
+            <label style="display:flex;gap:10px;align-items:flex-start;">
+              <input type="checkbox" name="sms_consent_optional" style="margin-top:4px;">
+              <span
+                data-en="(Optional) I consent to receive non-marketing text messages about pricing, service details, scheduling, and status updates. Frequency may vary (up to 4 msgs/month). Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help."
+                data-es="(Opcional) Acepto recibir mensajes NO promocionales sobre precio, detalles del servicio, coordinación y actualizaciones. Frecuencia variable (hasta 4 mensajes/mes). Pueden aplicar cargos. STOP para salir. HELP para ayuda."></span>
+            </label>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" type="submit" data-en="Submit Request" data-es="Enviar Solicitud"></button>
+          <a class="btn outline" href="tel:+19803821014" data-en="Call/Text 980-382-1014" data-es="Llama/Texto 980-382-1014"></a>
+        </div>
+
+        <p style="margin-top:12px;font-size:13px;color:var(--muted)"
+           data-en="Important: Not a law firm or CPA firm. No legal or tax advice."
+           data-es="Importante: No somos abogados ni CPA. No ofrecemos asesoría legal ni fiscal."></p>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>© <span id="y"></span> YS Business Services LLC</div>
+      <div style="margin-top:6px">
+        <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
+        <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
+      </div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <script src="lang.js"></script>
   </div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-<script src="lang.js"></script>
-</div></body></html>
+</body>
+</html>
