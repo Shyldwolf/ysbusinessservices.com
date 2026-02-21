@@ -1,36 +1,193 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Services • YS Business Services LLC</title><link rel="stylesheet" href="styles.css"/></head><body><div class="container">
-<header class="nav">
-  <div class="brand">
-    <img src="assets/logo.png" alt="YS Business Services LLC logo">
-    <div><strong>YS Business Services LLC</strong><br><span style="color:var(--muted);font-size:13px">North Carolina • Call/Text 980-382-1014</span></div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Services • YS Business Services LLC</title>
+  <meta name="description" content="Services offered by YS Business Services LLC." />
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="YS Business Services LLC logo">
+        <div>
+          <strong>YS Business Services LLC</strong><br>
+          <span style="color:var(--muted);font-size:13px">North Carolina • Call/Text 980-382-1014</span>
+        </div>
+      </div>
+
+      <nav class="links">
+        <a href="index.html" data-en="Home" data-es="Inicio"></a>
+        <a href="services.html" data-en="Services" data-es="Servicios"></a>
+        <a href="about.html" data-en="About" data-es="Nosotros"></a>
+        <a href="contact.html" class="btn" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="tel:+19803821014" data-en="Call" data-es="Llamar"></a>
+
+        <div class="lang-toggle">
+          <button id="btn-en" type="button">EN</button>
+          <button id="btn-es" type="button">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="section card">
+      <h2 data-en="Services" data-es="Servicios"></h2>
+      <p data-en="Clear, practical support to help you start, stay organized, and grow."
+         data-es="Apoyo claro y práctico para ayudarte a iniciar, organizar y hacer crecer tu negocio."></p>
+
+      <p data-en="Not sure what you need? Start with our quick quote form and we’ll recommend the best option."
+         data-es="¿No sabes qué necesitas? Completa el formulario de cotización y te recomendamos la mejor opción."></p>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="contact.html" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="tel:+19803821014" data-en="Call Now" data-es="Llamar Ahora"></a>
+      </div>
+    </section>
+
+    <!-- GOOGLE / MARKETING SYSTEMS -->
+    <section class="section card">
+      <h3 data-en="Google & Lead Systems" data-es="Google y Sistemas de Leads"></h3>
+
+      <h4 data-en="Google Business Profile Setup / Optimization" data-es="Google Business Profile: Configuración / Optimización"></h4>
+      <p data-en="We create or optimize your Google Business Profile to help you get more calls and messages. Includes category/services setup, service areas, business description, photos, cover image, and basic profile cleanup."
+         data-es="Creamos u optimizamos tu Google Business Profile para aumentar llamadas y mensajes. Incluye categorías/servicios, áreas de servicio, descripción, fotos, portada y limpieza básica del perfil."></p>
+      <ul class="list">
+        <li data-en="Best for: contractors and local businesses that want more calls from Google."
+            data-es="Ideal para: contratistas y negocios locales que quieren más llamadas desde Google."></li>
+        <li data-en="What we need: business details + access/invite to your profile + 10–30 photos."
+            data-es="Qué necesitamos: datos del negocio + acceso/invitación al perfil + 10–30 fotos."></li>
+      </ul>
+
+      <h4 data-en="Reviews System (Link + QR + Scripts)" data-es="Sistema de Reseñas (Link + QR + Mensajes)"></h4>
+      <p data-en="We set up a simple review system to help you get more 5-star reviews. Includes your direct review link, QR code, and ready-to-send messages to request reviews from customers."
+         data-es="Configuramos un sistema simple para conseguir más reseñas 5 estrellas. Incluye link directo, código QR y mensajes listos para pedir reseñas a tus clientes."></p>
+      <ul class="list">
+        <li data-en="Best for: businesses with low reviews or inconsistent review requests."
+            data-es="Ideal para: negocios con pocas reseñas o sin un sistema constante para pedirlas."></li>
+      </ul>
+
+      <h4 data-en="Lead Tracking CRM Setup" data-es="Configuración de CRM para Leads"></h4>
+      <p data-en="We set up a simple CRM to track leads, quotes, and follow-ups so you don’t lose opportunities. Includes a basic pipeline and tracking system that’s easy to use."
+         data-es="Configuramos un CRM simple para registrar leads, cotizaciones y seguimientos para no perder oportunidades. Incluye un pipeline básico y sistema fácil de usar."></p>
+
+      <h4 data-en="Follow-Up System (24h / 72h)" data-es="Sistema de Seguimiento (24h / 72h)"></h4>
+      <p data-en="We provide follow-up scripts and a process to re-contact leads after quotes. This helps increase response rates and close more jobs."
+         data-es="Te damos mensajes y un proceso para dar seguimiento a leads después de cotizar. Esto sube respuestas y aumenta cierres."></p>
+    </section>
+
+    <!-- WEBSITE / FUNNELS -->
+    <section class="section card">
+      <h3 data-en="Website / Funnel Setup" data-es="Página Web / Embudo (Funnel)"></h3>
+
+      <h4 data-en="One-Page Website + Quote Form" data-es="Página de 1 Sección + Formulario de Cotización"></h4>
+      <p data-en="We build a clean one-page site with your services, contact info, and a quote form (or button). Great for ads and credibility."
+         data-es="Creamos una página limpia de una sección con servicios, contacto y formulario/botón de cotización. Ideal para anuncios y credibilidad."></p>
+
+      <h4 data-en="Funnels & Landing Pages" data-es="Funnels y Landing Pages"></h4>
+      <p data-en="We build landing pages for specific offers (e.g., Google setup, reviews, CRM) to convert visitors into leads."
+         data-es="Creamos landing pages para ofertas específicas (Google, reseñas, CRM) para convertir visitantes en leads."></p>
+    </section>
+
+    <!-- PAYMENTS / INVOICING -->
+    <section class="section card">
+      <h3 data-en="Payments, Quotes & Invoicing" data-es="Pagos, Cotizaciones y Facturación"></h3>
+
+      <h4 data-en="Quotes/Proposals Templates" data-es="Plantillas de Cotización/Propuesta"></h4>
+      <p data-en="Professional quote/proposal templates so you can send pricing clearly and close faster."
+         data-es="Plantillas profesionales de cotización/propuesta para enviar precios claros y cerrar más rápido."></p>
+
+      <h4 data-en="Invoice & Payment Setup" data-es="Configuración de Facturas y Pagos"></h4>
+      <p data-en="We help set up invoices and payment options so clients can pay easily (depending on your tools: QuickBooks, Stripe, etc.)."
+         data-es="Te ayudamos a configurar facturas y opciones de pago para que los clientes paguen fácil (según tus herramientas: QuickBooks, Stripe, etc.)."></p>
+    </section>
+
+    <!-- BOOKKEEPING / QUICKBOOKS -->
+    <section class="section card">
+      <h3 data-en="Bookkeeping & QuickBooks Support" data-es="Contabilidad Básica y Soporte QuickBooks"></h3>
+
+      <h4 data-en="QuickBooks Setup & Cleanup" data-es="Configuración y Limpieza de QuickBooks"></h4>
+      <p data-en="We help you set up QuickBooks, chart of accounts basics, categories, and organize transactions so your records are clean."
+         data-es="Te ayudamos a configurar QuickBooks, categorías básicas y organizar transacciones para que tus registros estén limpios."></p>
+
+      <h4 data-en="Ongoing Bookkeeping Support" data-es="Soporte de Contabilidad Mensual"></h4>
+      <p data-en="Monthly recordkeeping support: income/expense tracking, reconciliations, and basic reporting to stay organized."
+         data-es="Soporte mensual: registro de ingresos/gastos, conciliaciones y reportes básicos para mantenerte organizado."></p>
+
+      <p style="font-size:14px;color:var(--muted)"
+         data-en="Note: We are not a CPA firm and do not provide tax advice. We can help you get organized for your CPA/EA."
+         data-es="Nota: No somos firma CPA y no ofrecemos asesoría fiscal. Podemos ayudarte a organizarte para tu CPA/EA."></p>
+    </section>
+
+    <!-- BUSINESS FORMATION -->
+    <section class="section card">
+      <h3 data-en="Business Formation Support (Filing Assistance)" data-es="Apoyo en Formación de Empresas (Filing Assistance)"></h3>
+
+      <h4 data-en="LLC / Corporation / Partnership Filing Support" data-es="Apoyo para LLC / Corporación / Partnership"></h4>
+      <p data-en="We assist with preparing and filing business formation paperwork and organizing required information for state submission. State fees are paid by the client."
+         data-es="Ayudamos a preparar y enviar documentos para crear empresas y organizar la información requerida para el estado. Los fees del estado los paga el cliente."></p>
+
+      <h4 data-en="Organization & Templates" data-es="Organización y Plantillas"></h4>
+      <p data-en="We provide structured intake, checklists, and document organization to help you start correctly."
+         data-es="Te damos un intake estructurado, checklists y organización de documentos para iniciar correctamente."></p>
+
+      <p style="font-size:14px;color:var(--muted)"
+         data-en="Important: We are not a law firm and do not provide legal advice."
+         data-es="Importante: No somos abogados y no ofrecemos asesoría legal."></p>
+    </section>
+
+    <!-- BACK OFFICE -->
+    <section class="section card">
+      <h3 data-en="Back Office & Administrative Support" data-es="Back Office y Apoyo Administrativo"></h3>
+
+      <h4 data-en="Business Organization Systems" data-es="Sistemas de Organización del Negocio"></h4>
+      <p data-en="We organize your internal operations: folders, templates, onboarding checklist, and basic processes to run smoother."
+         data-es="Organizamos tu operación interna: carpetas, plantillas, checklist de onboarding y procesos básicos para trabajar mejor."></p>
+
+      <h4 data-en="Client Support & Operations" data-es="Soporte al Cliente y Operaciones"></h4>
+      <p data-en="We help streamline communication and follow-ups so your team can respond faster and stay organized."
+         data-es="Ayudamos a mejorar comunicación y seguimientos para responder más rápido y mantener orden."></p>
+    </section>
+
+    <!-- WHAT TO START WITH -->
+    <section class="section card">
+      <h3 data-en="What should you start with?" data-es="¿Con qué deberías empezar?"></h3>
+      <ul class="list">
+        <li data-en="If you want more calls: start with Google Business Profile Optimization + Reviews System."
+            data-es="Si quieres más llamadas: empieza con Optimización de Google + Sistema de Reseñas."></li>
+        <li data-en="If you’re losing leads: add CRM Setup + Follow-Up System."
+            data-es="Si pierdes leads: agrega CRM + Sistema de Seguimiento."></li>
+        <li data-en="If you need to get organized: start with Back Office Support or QuickBooks Setup."
+            data-es="Si necesitas organizarte: empieza con Back Office o QuickBooks Setup."></li>
+        <li data-en="If you’re starting a new business: start with Business Formation Support."
+            data-es="Si estás iniciando: empieza con Apoyo en Formación de Empresas."></li>
+      </ul>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="contact.html" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="tel:+19803821014" data-en="Call/Text 980-382-1014" data-es="Llama/Texto 980-382-1014"></a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>© <span id="y"></span> YS Business Services LLC</div>
+      <div style="margin-top:6px">
+        <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
+        <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+    <script src="lang.js"></script>
+
   </div>
-  <nav class="links">
-    <a href="index.html" data-en="Home" data-es="Inicio"></a>
-    <a href="services.html" data-en="Services" data-es="Servicios"></a>
-    <a href="about.html" data-en="About" data-es="Nosotros"></a>
-    <a href="contact.html" class="btn" data-en="Get a Quote" data-es="Cotizar"></a>
-    <a class="btn outline" href="tel:+19803821014" data-en="Call" data-es="Llamar"></a>
-    <div class="lang-toggle"><button id="btn-en" type="button">EN</button><button id="btn-es" type="button">ES</button></div>
-  </nav>
-</header>
-<section class="section">
-<h2 data-en="Our Services" data-es="Nuestros Servicios"></h2>
-<div class="grid" style="margin-top:14px">
-  <div class="card" style="grid-column:span 6"><h3 data-en="Google Business Profile Optimization" data-es="Optimización de Google Business Profile"></h3><p data-en="Setup/cleanup, services, areas, photos, and description." data-es="Configuración/optimización, servicios, áreas, fotos y descripción."></p></div>
-  <div class="card" style="grid-column:span 6"><h3 data-en="Reviews System (Link + QR)" data-es="Sistema de Reseñas (Link + QR)"></h3><p data-en="Review link + QR + request scripts." data-es="Link de reseñas + QR + mensajes."></p></div>
-  <div class="card" style="grid-column:span 6"><h3 data-en="CRM + Follow-Up" data-es="CRM + Seguimiento"></h3><p data-en="Lead tracking + 24h/72h follow-up scripts." data-es="Registro de leads + guiones 24h/72h."></p></div>
-  <div class="card" style="grid-column:span 6"><h3 data-en="Bookkeeping & QuickBooks Support" data-es="Bookkeeping y Soporte QuickBooks"></h3><p data-en="Recordkeeping, reconciliations, and simple reporting." data-es="Registros, conciliaciones y reportes simples."></p></div>
-  <div class="card" style="grid-column:span 12"><h3 data-en="Business Formation Support (Filing Assistance)" data-es="Creación de Empresa (Filing Assistance)"></h3><p data-en="Administrative filing assistance and document organization." data-es="Apoyo administrativo para filing y organización de documentos."></p></div>
-</div>
-</section>
-<footer class="footer">
-  <div>© <span id="y"></span> YS Business Services LLC</div>
-  <div style="margin-top:6px">
-    <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
-    <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
-  </div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-<script src="lang.js"></script>
-</div></body></html>
+</body>
+</html>
