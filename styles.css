@@ -343,6 +343,70 @@ a:hover{ text-decoration:none; }
 
 .list li{ margin: 6px 0; }
 
+/* ---------- Image Layouts ---------- */
+.hero-split {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.hero-content {
+  flex: 1;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius2);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  filter: drop-shadow(0 15px 35px rgba(0,215,176,.15));
+}
+.value-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(47,128,255,.2));
+}
+.who-we-help-split {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.who-we-help-content {
+  flex: 1;
+}
+.who-we-help-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.who-we-help-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 780px) {
+  .hero-split, .who-we-help-split {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image img, .who-we-help-image img {
+    margin-top: 20px;
+  }
+  .kpis, .hero-content .btn, .hero-content .btn.outline {
+    justify-content: center;
+  }
+}
+
+
 /* ---------- Footer ---------- */
 .footer{
   margin-top: 18px;
