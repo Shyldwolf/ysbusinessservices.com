@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Get a Quote • YS Business Services LLC</title>
-  <meta name="description" content="Request a quote from YS Business Services LLC."/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="Request a quote from YS Business Services LLC." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -38,135 +39,155 @@
     </header>
 
     <!-- CONTENT -->
-    <section class="section card">
-      <h2 data-en="Request a Quote" data-es="Solicitar Cotización"></h2>
-      <p data-en="Fill out this form and we’ll contact you shortly with pricing and next steps."
-         data-es="Completa este formulario y te contactaremos pronto con precio y próximos pasos."></p>
+    <section class="section">
+      <div class="card hero-split">
+        <div class="hero-content">
+          <h2 data-en="Request a Quote" data-es="Solicitar Cotización"></h2>
+          <p data-en="Fill out this form and we’ll contact you shortly with pricing and next steps."
+            data-es="Completa este formulario y te contactaremos pronto con precio y próximos pasos."></p>
+        </div>
+        <div class="hero-image">
+          <img src="assets/services_hero_1772042041891.png" alt="Contact YS Business Services" class="img-wide">
+        </div>
+      </div>
 
-      <!-- Netlify Form -->
-      <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
-        <!-- Required for Netlify to detect form -->
-        <input type="hidden" name="form-name" value="quote">
+      <div class="card" style="margin-top: 14px;">
+        <!-- Netlify Form -->
+        <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+          <!-- Required for Netlify to detect form -->
+          <input type="hidden" name="form-name" value="quote">
 
-        <!-- Honeypot (spam trap) -->
-        <p style="display:none;">
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
+          <!-- Honeypot (spam trap) -->
+          <p style="display:none;">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
 
-        <div class="grid">
-          <div class="card" style="grid-column:span 6">
-            <label data-en="Full Name" data-es="Nombre Completo"></label><br>
-            <input name="full_name" required placeholder="" style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
-          </div>
+          <div class="grid">
+            <div class="card" style="grid-column:span 6">
+              <label data-en="Full Name" data-es="Nombre Completo"></label><br>
+              <input name="full_name" required placeholder=""
+                style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+            </div>
 
-          <div class="card" style="grid-column:span 6">
-            <label data-en="Business Name" data-es="Nombre del Negocio"></label><br>
-            <input name="business_name" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
-          </div>
+            <div class="card" style="grid-column:span 6">
+              <label data-en="Business Name" data-es="Nombre del Negocio"></label><br>
+              <input name="business_name" required
+                style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+            </div>
 
-          <div class="card" style="grid-column:span 6">
-            <label data-en="Phone Number" data-es="Teléfono"></label><br>
-            <input name="phone" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
-          </div>
+            <div class="card" style="grid-column:span 6">
+              <label data-en="Phone Number" data-es="Teléfono"></label><br>
+              <input name="phone" required
+                style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+            </div>
 
-          <div class="card" style="grid-column:span 6">
-            <label data-en="Email" data-es="Correo"></label><br>
-            <input type="email" name="email" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
-          </div>
+            <div class="card" style="grid-column:span 6">
+              <label data-en="Email" data-es="Correo"></label><br>
+              <input type="email" name="email" required
+                style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+            </div>
 
-          <div class="card" style="grid-column:span 6">
-            <label data-en="City" data-es="Ciudad"></label><br>
-            <input name="city" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
-          </div>
+            <div class="card" style="grid-column:span 6">
+              <label data-en="City" data-es="Ciudad"></label><br>
+              <input name="city" required
+                style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+            </div>
 
-          <div class="card" style="grid-column:span 6">
-            <label data-en="Service Needed" data-es="Servicio Necesario"></label><br>
-            <select name="service_needed" required style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
-              <option value="" data-en="Select one" data-es="Elige uno"></option>
-              <option value="Google Business Profile Optimization">Google Business Profile Optimization</option>
-              <option value="Reviews System (Link + QR)">Reviews System (Link + QR)</option>
-              <option value="CRM Setup + Follow-Up">CRM Setup + Follow-Up</option>
-              <option value="Website / Funnel Setup">Website / Funnel Setup</option>
-              <option value="Bookkeeping / QuickBooks Support">Bookkeeping / QuickBooks Support</option>
-              <option value="Business Formation Support">Business Formation Support</option>
-              <option value="Back Office Support">Back Office Support</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+            <div class="card" style="grid-column:span 6">
+              <label data-en="Service Needed" data-es="Servicio Necesario"></label><br>
+              <select name="service_needed" required
+                style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);">
+                <option value="" data-en="Select one" data-es="Elige uno"></option>
+                <option value="Google Business Profile Optimization">Google Business Profile Optimization</option>
+                <option value="Reviews System (Link + QR)">Reviews System (Link + QR)</option>
+                <option value="CRM Setup + Follow-Up">CRM Setup + Follow-Up</option>
+                <option value="Website / Funnel Setup">Website / Funnel Setup</option>
+                <option value="Bookkeeping / QuickBooks Support">Bookkeeping / QuickBooks Support</option>
+                <option value="Business Formation Support">Business Formation Support</option>
+                <option value="Back Office Support">Back Office Support</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
 
-          <div class="card" style="grid-column:span 12">
-            <label data-en="Details (optional)" data-es="Detalles (opcional)"></label><br>
-            <textarea name="details" rows="4" style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);"></textarea>
-          </div>
+            <div class="card" style="grid-column:span 12">
+              <label data-en="Details (optional)" data-es="Detalles (opcional)"></label><br>
+              <textarea name="details" rows="4"
+                style="width:100%;margin-top:8px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--text);"></textarea>
+            </div>
 
-          <!-- Terms & Privacy required -->
-          <div class="card" style="grid-column:span 12">
-            <label style="display:flex;gap:10px;align-items:flex-start;">
-              <input type="checkbox" name="terms_privacy" required style="margin-top:4px;">
-              <span
-                data-en="I agree to the Terms & Conditions and Privacy Policy."
-                data-es="Acepto los Términos y Condiciones y la Política de Privacidad."></span>
-            </label>
-            <div style="margin-top:8px;color:var(--muted);font-size:13px;">
-              <a href="terms.html" data-en="View Terms" data-es="Ver Términos"></a> •
-              <a href="privacy.html" data-en="View Privacy" data-es="Ver Privacidad"></a>
+            <!-- Terms & Privacy required -->
+            <div class="card" style="grid-column:span 12">
+              <label style="display:flex;gap:10px;align-items:flex-start;">
+                <input type="checkbox" name="terms_privacy" required style="margin-top:4px;">
+                <span data-en="I agree to the Terms & Conditions and Privacy Policy."
+                  data-es="Acepto los Términos y Condiciones y la Política de Privacidad."></span>
+              </label>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px;">
+                <a href="terms.html" data-en="View Terms" data-es="Ver Términos"></a> •
+                <a href="privacy.html" data-en="View Privacy" data-es="Ver Privacidad"></a>
+              </div>
+            </div>
+
+            <!-- SMS consent optional (A2P-friendly wording) -->
+            <div class="card" style="grid-column:span 12">
+              <label style="display:flex;gap:10px;align-items:flex-start;">
+                <input type="checkbox" name="sms_consent_optional" style="margin-top:4px;">
+                <span
+                  data-en="(Optional) By checking this box, you agree to receive conversational and customer care SMS messages from YS Business Services LLC related to your request, including pricing, service information, scheduling, and status updates (up to 4 messages per month). Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help."
+                  data-es="(Opcional) Al marcar esta casilla, aceptas recibir mensajes SMS conversacionales y de atención al cliente de YS Business Services LLC relacionados con tu solicitud, incluyendo precios, información del servicio, programación y actualizaciones de estado (hasta 4 mensajes por mes). Pueden aplicar tarifas de mensajes y datos. Responde STOP para darte de baja. Responde HELP para obtener ayuda. El consentimiento para SMS no es una condición de compra."></span>
+              </label>
             </div>
           </div>
 
-          <!-- SMS consent optional (A2P-friendly wording) -->
-          <div class="card" style="grid-column:span 12">
-            <label style="display:flex;gap:10px;align-items:flex-start;">
-              <input type="checkbox" name="sms_consent_optional" style="margin-top:4px;">
-              <span
-                data-en="(Optional) By checking this box, you agree to receive conversational and customer care SMS messages from YS Business Services LLC related to your request, including pricing, service information, scheduling, and status updates (up to 4 messages per month). Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help."
-                data-es="(Opcional) Al marcar esta casilla, aceptas recibir mensajes SMS conversacionales y de atención al cliente de YS Business Services LLC relacionados con tu solicitud, incluyendo precios, información del servicio, programación y actualizaciones de estado (hasta 4 mensajes por mes). Pueden aplicar tarifas de mensajes y datos. Responde STOP para darte de baja. Responde HELP para obtener ayuda. El consentimiento para SMS no es una condición de compra."></span>
-            </label>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn" type="submit" data-en="Submit Request" data-es="Enviar Solicitud"></button>
+            <a class="btn outline" href="tel:+19803821014" data-en="Call/Text 980-382-1014"
+              data-es="Llama/Texto 980-382-1014"></a>
           </div>
-        </div>
 
-        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn" type="submit" data-en="Submit Request" data-es="Enviar Solicitud"></button>
-          <a class="btn outline" href="tel:+19803821014" data-en="Call/Text 980-382-1014" data-es="Llama/Texto 980-382-1014"></a>
-        </div>
-
-        <p style="margin-top:12px;font-size:13px;color:var(--muted)"
-           data-en="Important: Not a law firm or CPA firm. No legal or tax advice."
-           data-es="Importante: No somos abogados ni CPA. No ofrecemos asesoría legal ni fiscal."></p>
-      </form>
+          <p style="margin-top:12px;font-size:13px;color:var(--muted)"
+            data-en="Important: Not a law firm or CPA firm. No legal or tax advice."
+            data-es="Importante: No somos abogados ni CPA. No ofrecemos asesoría legal ni fiscal."></p>
+        </form>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer footer-3col">
-  <div class="footer-left">
-    © <span id="y"></span> YS Business Services LLC
-  </div>
+      <div class="footer-left">
+        © <span id="y"></span> YS Business Services LLC
+      </div>
 
-  <div class="footer-center">
-    <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
-    <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
-  </div>
+      <div class="footer-center">
+        <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
+        <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
+      </div>
 
-  <div class="footer-right social-icons-glass" aria-label="Social media links">
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/ysbusinessservicesllc/" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5Zm8.9 2.1a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 0 0 12 8.5Z"/>
-      </svg>
-    </a>
+      <div class="footer-right social-icons-glass" aria-label="Social media links">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/ysbusinessservicesllc/" target="_blank" rel="noopener"
+          aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5Zm8.9 2.1a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 0 0 12 8.5Z" />
+          </svg>
+        </a>
 
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/people/YS-Business-Services-LLC/61587980559603/" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.7-1.6h1.6V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V11H8v3h2.4v8h3.1Z"/>
-      </svg>
-    </a>
-  </div>
-</footer>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/people/YS-Business-Services-LLC/61587980559603/" target="_blank"
+          rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.7-1.6h1.6V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V11H8v3h2.4v8h3.1Z" />
+          </svg>
+        </a>
+      </div>
+    </footer>
 
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-<script src="lang.js"></script>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+    <script src="lang.js"></script>
   </div>
 </body>
+
 </html>

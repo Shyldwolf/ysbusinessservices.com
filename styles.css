@@ -137,48 +137,62 @@ a:hover {
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-  min-width: 320px;
+  gap: clamp(4px, 1.2vw, 14px);
+  min-width: unset;
+  /* Allow shrinking */
 }
 
 .brand img {
-  height: 60px;
-  /* bigger logo */
+  height: clamp(28px, 4vw, 60px);
   width: auto;
   filter: drop-shadow(0 14px 24px rgba(0, 0, 0, .45));
 }
 
 .brand strong {
-  font-size: 18px;
-  /* bigger company name */
+  font-size: clamp(12px, 1.6vw, 18px);
   letter-spacing: .3px;
   line-height: 1.1;
   color: var(--text);
   text-shadow: 0 14px 26px rgba(0, 0, 0, .45);
+  white-space: nowrap;
 }
 
 /* tagline under name (your HTML uses inline style; we override it) */
 .brand span {
-  font-size: 14px !important;
+  font-size: clamp(9px, 1.1vw, 14px) !important;
   color: rgba(233, 240, 255, .92) !important;
+  white-space: nowrap;
 }
 
 /* ---------- Nav links ---------- */
 .links {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  gap: clamp(2px, 0.8vw, 10px);
+  flex-wrap: nowrap;
+
+  overflow-x: auto;
+
+  -webkit-overflow-scrolling: touch;
+  min-width: 0;
+  margin-left: auto;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.links::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for clean look */
 }
 
 .links a {
   color: var(--muted);
   font-weight: 800;
-  font-size: 13px;
-  padding: 10px 10px;
+  font-size: clamp(9px, 1.1vw, 13px);
+  padding: clamp(4px, 0.6vw, 10px) clamp(6px, 0.8vw, 10px);
   border-radius: 12px;
   transition: transform .15s ease, background .15s ease, color .15s ease;
+  white-space: nowrap;
 }
 
 .links a:hover {
@@ -199,6 +213,7 @@ a:hover {
   letter-spacing: .2px;
   font-size: 13px;
   color: white;
+  white-space: nowrap;
 
   background:
     linear-gradient(135deg, rgba(47, 128, 255, 1), rgba(0, 215, 176, 0.95));
@@ -216,6 +231,11 @@ a:hover {
 
 .btn:active {
   transform: translateY(0px) scale(.99);
+}
+
+.nav .btn {
+  font-size: clamp(9px, 1vw, 13px);
+  padding: clamp(6px, 0.8vw, 12px) clamp(8px, 1.1vw, 16px);
 }
 
 .btn.outline {
@@ -481,16 +501,17 @@ a:hover {
 /* ---------- Language toggle ---------- */
 .lang-toggle {
   display: flex;
-  gap: 8px;
+  gap: clamp(2px, 0.5vw, 8px);
   align-items: center;
-  padding: 4px;
+  padding: clamp(2px, 0.5vw, 4px);
   border-radius: 14px;
   background: rgba(255, 255, 255, .05);
   border: 1px solid rgba(255, 255, 255, .12);
 }
 
 .lang-toggle button {
-  padding: 10px 12px;
+  padding: clamp(6px, 0.8vw, 10px) clamp(8px, 1vw, 12px);
+  font-size: clamp(9px, 1vw, 13px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, .12);
   background: transparent;
