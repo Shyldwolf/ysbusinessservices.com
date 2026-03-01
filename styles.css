@@ -170,14 +170,25 @@ a:hover {
   align-items: center;
   gap: clamp(2px, 0.8vw, 10px);
   flex-wrap: nowrap;
+  flex: 1;
+  /* Allow container to shrink */
 
   overflow-x: auto;
-
   -webkit-overflow-scrolling: touch;
   min-width: 0;
-  margin-left: auto;
-  padding-right: 14px;
-  padding-left: 14px;
+
+  /* FIX: más espacio al final para que el último elemento (ES/EN) no se corte */
+  padding-right: 26px;
+  scroll-padding-right: 26px;
+}
+
+/* ✅ FIX: quitamos el "empuje fantasma" que provocaba corte con overflow */
+/* .links::before { content:""; margin-left:auto; } */
+
+/* Mantener todos los items sin aplastar */
+.links>* {
+  flex-shrink: 0;
+  /* IMPEDIR QUE LOS ELEMENTOS SE APLASTEN */
 }
 
 .links::-webkit-scrollbar {
@@ -199,6 +210,12 @@ a:hover {
   color: var(--text);
   background: rgba(255, 255, 255, .06);
   transform: translateY(-1px);
+}
+
+/* ✅ FIX: empuja el toggle al final, pero sigue siendo parte del flujo normal */
+.links .lang-toggle {
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 /* ---------- Buttons ---------- */
@@ -978,4 +995,39 @@ textarea::placeholder {
     justify-content: center;
     margin-top: 2px;
   }
+}
+
+/* ===== FIX DEFINITIVO: no cortar el botón ES con zoom ===== */
+
+/* 1) NO recortes el contenido real del nav */
+.nav{
+  overflow: visible !important;
+}
+
+/* 2) Recorta SOLO el brillo/shine dentro del borde redondeado */
+.nav::before,
+.nav::after{
+  clip-path: inset(0 round 20px);
+}
+
+/* 3) Elimina el "empuje fantasma" viejo (si aún existe) */
+.links::before{
+  content: none !important;
+}
+
+/* 4) Empuja el selector de idioma al final, pero SIN sticky */
+.links .lang-toggle{
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* 5) Dale “aire” al final para que nunca muerda el borde */
+.links{
+  padding-right: 30px !important;
+  scroll-padding-right: 30px;
+}
+
+/* 6) Extra: un pequeño margen a la derecha del toggle */
+.links .lang-toggle{
+  margin-right: 6px;
 }
