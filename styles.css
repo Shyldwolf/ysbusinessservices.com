@@ -1141,3 +1141,9 @@ textarea::placeholder {
     transform: scale(2.4);
   }
 }
+
+@media (max-width: 820px){
+  .brand img{
+    margin-left: -48px;
+  }
+}
