@@ -1140,6 +1140,7 @@ textarea::placeholder {
     display:flex !important;
     align-items:center !important;
     gap:10px !important;
+    overflow: visible !important; /* evita recorte */
   }
 
   .brand img{
@@ -1150,6 +1151,7 @@ textarea::placeholder {
     height:42px !important;
     width:auto !important;
 
-    transform:none !important;   /* mata scale */
+    transform-origin: left center !important;
+    transform: scale(2.2) !important;  /* prueba 2.0–2.6 */
   }
 }
