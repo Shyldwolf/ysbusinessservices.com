@@ -1139,8 +1139,8 @@ textarea::placeholder {
   .brand{
     display:flex !important;
     align-items:center !important;
-    gap:10px !important;
-    overflow: visible !important; /* evita recorte */
+    gap:12px !important;
+    min-width: 0 !important;
   }
 
   .brand img{
@@ -1148,10 +1148,15 @@ textarea::placeholder {
     visibility:visible !important;
     opacity:1 !important;
 
-    height:42px !important;
-    width:auto !important;
+    height: 64px !important;   /* sube/baja: 56–72 */
+    width: auto !important;
 
-    transform-origin: left center !important;
-    transform: scale(2.2) !important;  /* prueba 2.0–2.6 */
+    transform: none !important; /* NO scale */
+    flex: 0 0 auto !important;
+  }
+
+  /* asegura que el texto no se monte */
+  .brand > div{
+    min-width: 0 !important;
   }
 }
