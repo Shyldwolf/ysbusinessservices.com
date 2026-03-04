@@ -1134,11 +1134,17 @@ textarea::placeholder {
 }
 
 
- @media (max-width: 780px) {
+ @media (max-width: 780px){
+  .brand{
+    overflow: visible !important;  /* evita que recorte el logo */
+  }
+
   .brand img{
     height: 42px !important;
     width: auto !important;
-    transform: none !important;
-    margin-left: -48px !important;
+    transform: none !important;     /* quita el scale */
+    margin-left: 0 !important;      /* evita que se vaya fuera */
+    position: relative;
+    left: -48px;                    /* mueve sin “desaparecer” */
   }
 }
