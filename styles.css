@@ -1151,9 +1151,7 @@ textarea::placeholder {
     height:42px !important;
     width:auto !important;
 
-    transform: translateX(-68px);
-
-    transform-origin: left center !important;
+    
     transform: scale(2.2) !important;  /* prueba 2.0–2.6 */
   }
 }
