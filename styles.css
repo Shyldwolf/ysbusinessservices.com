@@ -143,7 +143,7 @@ a:hover {
 }
 
 .brand img {
-  height: clamp(28px, 4vw, 60px);
+  height: clamp(42px, 6vw, 90px);
   width: auto;
   filter: drop-shadow(0 14px 24px rgba(0, 0, 0, .45));
 }
@@ -597,7 +597,7 @@ button:focus {
   }
 
   .brand img {
-    height: 54px;
+    height: 81px;
   }
 
   .brand strong {
@@ -1000,34 +1000,144 @@ textarea::placeholder {
 /* ===== FIX DEFINITIVO: no cortar el botón ES con zoom ===== */
 
 /* 1) NO recortes el contenido real del nav */
-.nav{
+.nav {
   overflow: visible !important;
 }
 
 /* 2) Recorta SOLO el brillo/shine dentro del borde redondeado */
 .nav::before,
-.nav::after{
+.nav::after {
   clip-path: inset(0 round 20px);
 }
 
 /* 3) Elimina el "empuje fantasma" viejo (si aún existe) */
-.links::before{
+.links::before {
   content: none !important;
 }
 
 /* 4) Empuja el selector de idioma al final, pero SIN sticky */
-.links .lang-toggle{
+.links .lang-toggle {
   margin-left: auto;
   flex-shrink: 0;
 }
 
 /* 5) Dale “aire” al final para que nunca muerda el borde */
-.links{
+.links {
   padding-right: 30px !important;
   scroll-padding-right: 30px;
 }
 
 /* 6) Extra: un pequeño margen a la derecha del toggle */
-.links .lang-toggle{
+.links .lang-toggle {
   margin-right: 6px;
+}
+
+/* ===== Logo 1.5x (override al final) ===== */
+.brand img {
+  height: clamp(63px, 9vw, 135px);
+  width: auto;
+}
+
+@media (max-width: 780px) {
+  .brand img {
+    height: 122px;
+  }
+}
+
+/* Opcional: evitar que empuje los links cuando se aprieta */
+.brand {
+  min-width: 0;
+}
+
+.brand>div {
+  min-width: 0;
+}
+
+/* ===== FIX logo cuadrado: más grande SIN inflar la barra ===== */
+
+/* controla la altura real del header */
+.nav {
+  padding: 10px 14px !important;
+  /* antes 14px 14px */
+}
+
+/* el contenedor del logo */
+.brand {
+  align-items: center;
+}
+
+/* el PNG es cuadrado y trae aire: limitamos altura y escalamos el contenido */
+.brand img {
+  height: 78px !important;
+  /* tamaño real del header (ajústalo 70–90) */
+  width: 78px !important;
+  /* mantiene cuadrado */
+  object-fit: contain;
+  display: block;
+
+  /* aquí está el truco: agranda visualmente 1.5x sin hacer la barra gigante */
+  transform: scale(1.5);
+  transform-origin: left center;
+}
+
+/* Para que el scale no empuje/corte, dale espacio horizontal */
+.brand {
+  padding-left: 8px;
+}
+
+/* Mobile */
+@media (max-width: 780px) {
+  .brand img {
+    height: 64px !important;
+    width: 64px !important;
+    transform: scale(1.5);
+  }
+}
+
+/* ===== Logo scale(3) pegado a la izquierda ===== */
+
+/* 1) Quita cualquier padding que esté empujando el header */
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.nav {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* 2) Brand totalmente pegado al borde izquierdo */
+.brand {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* por si el logo trae margen por defecto */
+.brand img {
+  display: block;
+  margin: 0 !important;
+
+  /* tamaño base pequeño para NO inflar la barra */
+  height: 50px !important;
+  width: 50px !important;
+  object-fit: contain;
+
+  /* agrandar visualmente el contenido del PNG */
+  transform: translateX(-48px) scale(3);
+  transform-origin: left center;
+}
+
+/* 3) Asegura que el menú se vaya a la derecha */
+.links {
+  margin-left: auto !important;
+}
+
+/* 4) Mobile: un poco menos para que no se coma toda la barra */
+@media (max-width: 780px) {
+  .brand img {
+    height: 42px !important;
+    width: 42px !important;
+    transform: scale(2.4);
+  }
 }
