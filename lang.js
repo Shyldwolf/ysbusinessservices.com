@@ -1,42 +1,49 @@
-(function () {
-  const K = "ys_lang";
-  const D = "en";
+document.addEventListener("DOMContentLoaded", () => {
+  const btnEn = document.getElementById("btn-en");
+  const btnEs = document.getElementById("btn-es");
 
-  function getLang() {
-    return localStorage.getItem(K) || D;
-  }
+  function applyLanguage(lang) {
+    document.documentElement.lang = lang;
 
-  function apply(l) {
-    document.documentElement.setAttribute("lang", l);
+    document.querySelectorAll("[data-en]").forEach((el) => {
+      const text = lang === "es" ? el.getAttribute("data-es") : el.getAttribute("data-en");
 
-    document.querySelectorAll("[data-en][data-es]").forEach((el) => {
-      el.textContent = (l === "es") ? (el.dataset.es || "") : (el.dataset.en || "");
+      // para inputs, textareas, buttons y otros elementos
+      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+        if (el.hasAttribute("placeholder")) {
+          el.placeholder = text || "";
+        } else {
+          el.value = text || "";
+        }
+      } else {
+        el.textContent = text || "";
+      }
     });
 
-    const en = document.getElementById("btn-en");
-    const es = document.getElementById("btn-es");
-    if (en && es) {
-      en.classList.toggle("active", l === "en");
-      es.classList.toggle("active", l === "es");
+    if (btnEn && btnEs) {
+      btnEn.classList.toggle("active", lang === "en");
+      btnEs.classList.toggle("active", lang === "es");
     }
+
+    localStorage.setItem("siteLang", lang);
   }
 
-  function setLang(l) {
-    localStorage.setItem(K, l);
-    apply(l);
+  function getPreferredLanguage() {
+    const saved = localStorage.getItem("siteLang");
+    if (saved === "en" || saved === "es") return saved;
+
+    const browserLang = navigator.language || navigator.userLanguage || "en";
+    return browserLang.toLowerCase().startsWith("es") ? "es" : "en";
   }
 
-  function init() {
-    apply(getLang());
-    const en = document.getElementById("btn-en");
-    const es = document.getElementById("btn-es");
-    if (en) en.addEventListener("click", () => setLang("en"));
-    if (es) es.addEventListener("click", () => setLang("es"));
+  const initialLang = getPreferredLanguage();
+  applyLanguage(initialLang);
+
+  if (btnEn) {
+    btnEn.addEventListener("click", () => applyLanguage("en"));
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
+  if (btnEs) {
+    btnEs.addEventListener("click", () => applyLanguage("es"));
   }
-})();
+});
